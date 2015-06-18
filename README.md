@@ -1,0 +1,2 @@
+# salaryInput
+salary star
