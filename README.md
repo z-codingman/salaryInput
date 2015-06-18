@@ -1,2 +1,3 @@
 # salaryInput
 salary star
+input
