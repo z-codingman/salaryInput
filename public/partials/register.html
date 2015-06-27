@@ -2,10 +2,6 @@
     <div class="container">
         <div class="row col-xs-12">
             <div class="panel panel-default">
-                <!--<div class="panel-heading">-->
-                    <!--<h3 class="panel-title">Dream Guide导师注册申请</h3>-->
-                <!--</div>-->
-
                 <div class="panel-body">
                     <h2 style="margin: 0 0 10px;">导师资格申请表</h2>
                     <div class="alert alert-warning alert-dismissible" role="alert">
@@ -17,38 +13,14 @@
                             <h3 class="panel-title">个人信息</h3>
                         </div>
                         <div class="panel-body">
-                            <form class="" role="form" data-ng-submit="signInEmail()">
-                                <!--<div class="row ng-hide" data-ng-show="fieldErrors || errorMessage">-->
-                                <!--<div class="col-xs-12 alert alert-danger">-->
-                                <!--<p data-ng-bind-html="errorMessage" class="ng-binding"></p>-->
-                                <!--<ul>-->
-                                <!--&lt;!&ndash; ngRepeat: (field, error) in fieldErrors &ndash;&gt;-->
-                                <!--</ul>-->
-                                <!--</div>-->
-                                <!--</div>-->
+                            <form class="" role="form">
                                 <div class="row">
                                     <div class="col-sm-6 col-xs-6">
                                         <div>
                                             <!--<div data-ng-class="{'has-error': contactInfoErrors.setsEmail}">-->
                                             <label for="email">显示姓名</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="将在社区中显示" data-ng-model="show_name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 col-xs-6">
-                                        <!--<div data-ng-class="{'has-error': contactInfoErrors.setsPassword}">-->
-                                        <div>
-                                            <label for="password">性别</label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 男
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 女
-                                            </label>
-                                            <!--<div style="clear:both"></div>-->
-                                            <!--<input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="性别" data-ng-model="real_name">-->
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="将在社区中显示" data-ng-model="user.showName">
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +30,7 @@
                                         <div>
                                             <label for="password">真实姓名</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请填写真实姓名" data-ng-model="real_name">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请填写真实姓名" data-ng-model="user.realName">
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +40,7 @@
                                             <!--<div data-ng-class="{'has-error': contactInfoErrors.setsEmail}">-->
                                             <label for="email">电子邮箱</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid ng-valid-email" id="email" placeholder="邮箱将作为登陆账户" data-ng-model="email">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid ng-valid-email" id="email" placeholder="邮箱将作为登陆账户" data-ng-model="user.email">
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +50,7 @@
                                         <div>
                                             <label for="password">密码</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" id="password" placeholder="登陆密码" data-ng-model="password">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" id="password" placeholder="登陆密码" data-ng-model="user.password">
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +60,7 @@
                                             <!--<div data-ng-class="{'has-error': contactInfoErrors.setsEmail}">-->
                                             <label for="email">微信号/QQ号</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="填写微信/QQ号码，便于联系沟通" data-ng-model="wechat">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="填写微信/QQ号码，便于联系沟通" data-ng-model="user.wechat">
                                         </div>
                                     </div>
                                 </div>
@@ -98,17 +70,7 @@
                                         <div>
                                             <label for="password">常用电话(海外)</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请填写常用电话" data-ng-model='cellphone'>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 col-xs-6">
-                                        <!--<div data-ng-class="{'has-error': contactInfoErrors.setsPassword}">-->
-                                        <div>
-                                            <label for="password">SKYPE号码</label>
-                                            <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请填写Skype号码" data-ng-model='skype'>
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请填写常用电话" data-ng-model='user.cellphone'>
                                         </div>
                                     </div>
                                 </div>
@@ -120,15 +82,7 @@
                             <h3 class="panel-title">专业和工作背景</h3>
                         </div>
                         <div class="panel-body">
-                            <form class="" role="form" data-ng-submit="signInEmail2()">
-                                <!--<div class="row ng-hide" data-ng-show="fieldErrors || errorMessage">-->
-                                <!--<div class="col-xs-12 alert alert-danger">-->
-                                <!--<p data-ng-bind-html="errorMessage" class="ng-binding"></p>-->
-                                <!--<ul>-->
-                                <!--&lt;!&ndash; ngRepeat: (field, error) in fieldErrors &ndash;&gt;-->
-                                <!--</ul>-->
-                                <!--</div>-->
-                                <!--</div>-->
+                            <form class="" role="form">
                                 <div class="row">
                                     <div class="col-sm-6 col-xs-6">
                                         <div>
@@ -203,10 +157,10 @@
                             </form>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" data-ng-click="apply">
                         提交申请
                     </button>
-                    <button type="button" class="btn btn-default">
+                    <button type="button" class="btn btn-default" data-ng-click="reset">
                         重置申请
                     </button>
                 </div>

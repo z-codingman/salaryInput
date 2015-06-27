@@ -8,6 +8,11 @@ define([
     //'use strict';
     controllers.controller('RegisterCtrl', ['$scope', function ($scope) {
         console.log('register');
+        $scope.user = {};
+
+        $scope.apply = function(){
+            console.log($scope.user);
+        }
 
     }]);
 });

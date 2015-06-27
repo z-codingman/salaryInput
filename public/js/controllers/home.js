@@ -1,9 +1,6 @@
 define([
     './module',
-    'jquery',
-    'highmaps',
-    'custom-world',
-    'custom-data'
+    'jquery'
 ], function (controllers) {
     //'use strict';
     controllers.controller('IndexCtrl', ['$scope', function ($scope) {
