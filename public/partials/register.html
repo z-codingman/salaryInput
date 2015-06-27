@@ -89,7 +89,7 @@
                                             <!--<div data-ng-class="{'has-error': contactInfoErrors.setsEmail}">-->
                                             <label for="email">LinkedIn/领英 链接</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="example: https://www.linkedin.com/in/abc " data-ng-model="linkedin">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="example: https://www.linkedin.com/in/abc " data-ng-model="user.linkedin">
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                                         <div>
                                             <label for="password">留学国家</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="留学国家" data-ng-model="real_name">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="留学国家" data-ng-model="user.recentCountry">
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                                             <!--<div data-ng-class="{'has-error': contactInfoErrors.setsEmail}">-->
                                             <label for="email">在读/毕业院校</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid ng-valid-email" placeholder="留学所去学校" data-ng-model="email">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid ng-valid-email" placeholder="留学所去学校" data-ng-model="user.school1">
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@
                                         <div>
                                             <label for="password">专业</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请选择学习专业" data-ng-model="password">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请选择学习专业" data-ng-model="user.major1">
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                                             <!--<div data-ng-class="{'has-error': contactInfoErrors.setsEmail}">-->
                                             <label for="email">学校邮箱</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="填写邮箱有助于验证导师信息" data-ng-model="wechat">
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="填写邮箱有助于验证导师信息" data-ng-model="user.schoolEmail">
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@
                                         <div>
                                             <label for="password">现工作单位及地区</label>
                                             <div style="clear:both"></div>
-                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="" data-ng-model='skype'>
+                                            <input type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="" data-ng-model='user.region'>
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                                         <div>
                                             <label for="password">个人简介</label>
                                             <div style="clear:both"></div>
-                                            <textarea type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请用少于100字介绍自己的学习工作状况" data-ng-model='cellphone'></textarea>
+                                            <textarea type="text" class="form-control pull-left ng-pristine ng-valid" placeholder="请用少于100字介绍自己的学习工作状况" data-ng-model='user.intro'></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -165,10 +165,6 @@
                     </button>
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
 </div>
