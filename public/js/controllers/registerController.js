@@ -12,7 +12,10 @@ define([
 
         $scope.apply = function(){
             console.log($scope.user);
-        }
+        };
 
+        $scope.reset = function(){
+            $scope.user = {};
+        };
     }]);
 });

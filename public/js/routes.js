@@ -5,7 +5,7 @@
 
 define(['./app'], function (app) {
     return app.config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/', {
+        $routeProvider.when('/index', {
             templateUrl: 'partials/index.html',
             controller: 'IndexCtrl'
         });
@@ -14,7 +14,7 @@ define(['./app'], function (app) {
 
         });
 
-        $routeProvider.when('/register', {
+        $routeProvider.when('/', {
             templateUrl: 'partials/register.html',
             controller: 'RegisterCtrl'
         });
